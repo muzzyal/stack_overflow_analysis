@@ -1,0 +1,18 @@
+{
+    "name": "stack_overflow_questions",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "dbt",
+    "workspaceFolder": "/workspaces",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.rulers": [
+                    {
+                        "column": 120,
+                        "colour": "#eb0f0f"
+                    }
+                ]
+            }
+        }
+    }
+}
