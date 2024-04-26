@@ -1,0 +1,18 @@
+name: stack_overflow
+version: 1.0.0
+config-version: 2
+
+profile: 'BIGQUERY'
+
+source-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  stack_overflow:
+    materialized: table
+
+on-run-start:
+  - "{{ log('Starting dbt run', info=True) }}"
+
+on-run-end:
+  - "{{ log('Ending dbt run', info=True) }}"

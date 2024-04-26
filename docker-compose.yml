@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/workspaces
+      - ~/sa:/tmp/sa:ro
+    command: sleep infinity
+    env_file: .env
+    tty: true
+    privileged: false
+    
