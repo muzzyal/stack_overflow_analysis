@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+  - repo: local
+    hooks:
+      - id: my-custom-command
+        name: Run sqlfluff lint
+        entry: sqlfluff
+        args: ["lint"]
+        language: system
+        files: \.sql$
