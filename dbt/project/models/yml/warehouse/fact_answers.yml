@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fact_answers
+    unique_key: id
+    columns:
+      - name: id
+        description: Answer ID
+        tests:
+          - unique
+          - not_null
+      - name: date_id
+        description: Creation date as date_id
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: id
+      - name: last_editor_user_id
+        description: Last user to edit the answer
+      - name: score
+        description: Answer score, determined by up votes - down votes

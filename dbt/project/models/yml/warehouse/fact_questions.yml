@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_questions
+    unique_key: id
+    columns:
+      - name: id
+        description: Question ID
+        tests:
+          - unique
+          - not_null
+      - name: date_id
+        description: Creation date as date_id
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: id
+      - name: answer_count
+        description: Answers the question has received
+      - name: has_accepted_answer
+        description: Has one of the answers been accepted by the author of the question
+      - name: score
+        description: Question score, determined by up votes - down votes
+      - name: view_count
+        description: Count of views the question has received

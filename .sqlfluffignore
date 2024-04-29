@@ -1,0 +1,3 @@
+# dbt output files
+target/
+dbt_packages/

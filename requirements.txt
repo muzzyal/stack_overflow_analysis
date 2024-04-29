@@ -1,1 +1,4 @@
 dbt-bigquery==1.7.7
+sqlfluff==3.0.5
+sqlfluff-templater-dbt==3.0.5
+pre-commit==3.7.0

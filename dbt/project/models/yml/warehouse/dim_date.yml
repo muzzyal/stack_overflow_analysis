@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_date
+    unique_key: id
+    columns:
+      - name: id
+        description: Date id
+        tests:
+          - unique
+          - not_null
+      - name: month_key
+        description: Month and year
+      - name: year_key
+        description: Year alone
+      - name: day_date
+        description: Actual date
+      - name: month_date
+        description: Month date, represented by first of the month
+      - name: year_date
+        description: Year date, represented by first of the year

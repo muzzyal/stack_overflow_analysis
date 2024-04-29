@@ -32,6 +32,8 @@ var/
 logs/
 .user.yml
 profiles.yml
+dbt/project/dbt_packages/*
+dbt/project/package-lock.yml
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_tags
+    unique_key: id
+    columns:
+      - name: id
+        description: Tag id
+        tests:
+          - unique
+          - not_null
+      - name: tag_name
+        description: Individual tag taken from tags on questions
+        tests:
+          - unique
+          - not_null
