@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: question_answers
+    unique_key: id
+    columns:
+      - name: question_id
+        description: ID from questions table
+        tests:
+          - relationships:
+              to: ref('fact_questions')
+              field: id
+      - name: answer_id
+        description: ID from answers table
+        tests:
+          - relationships:
+              to: ref('fact_answers')
+              field: id

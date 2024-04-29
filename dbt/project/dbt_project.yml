@@ -4,12 +4,17 @@ config-version: 2
 
 profile: 'BIGQUERY'
 
-source-paths: ["models"]
+model-paths: ["models"]
 test-paths: ["tests"]
 
 models:
   stack_overflow:
-    materialized: table
+    warehouse:
+      materialized: table
+      schema: warehouse
+    datamart:
+      materialized: table
+      schema: datamart
 
 on-run-start:
   - "{{ log('Starting dbt run', info=True) }}"

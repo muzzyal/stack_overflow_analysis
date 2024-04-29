@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: question_tags
+    columns:
+      - name: question_id
+        description: ID from questions table
+        tests:
+          - relationships:
+              to: ref('fact_questions')
+              field: id
+      - name: tag_id
+        description: ID from tags table
+        tests:
+          - relationships:
+              to: ref('dim_tags')
+              field: id

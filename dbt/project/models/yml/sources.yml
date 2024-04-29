@@ -5,5 +5,9 @@ sources:
     database: bigquery-public-data
     schema: stackoverflow
     tables:
+      - name: users
+        description: "Stackoverflow users source from BigQuery public data"
       - name: posts_questions
-        description: "Post questions source from Big Query public data"
+        description: "Stackoverflow post questions source from BigQuery public data"
+      - name: posts_answers
+        description: "Stackoverflow post answers source from BigQuery public data"
