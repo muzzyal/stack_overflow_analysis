@@ -2,7 +2,6 @@ version: 2
 
 models:
   - name: question_answers
-    unique_key: id
     columns:
       - name: question_id
         description: ID from questions table
